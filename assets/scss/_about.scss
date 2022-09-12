@@ -1,0 +1,79 @@
+
+
+// about css
+.about-section {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0 0;
+
+    .about-img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include transform(translateY(-50%));
+        width: 43%;
+        z-index: -1;
+
+        @media #{$md} {
+            position: static;
+            width: 100%;
+            @include transform(translateY(0));
+        }
+        @media #{$xs} {
+            position: static;
+            width: 100%;
+            @include transform(translateY(0));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .about-content {
+        @media #{$desktop} {
+            padding: 200px 0;
+        }
+        @media #{$laptop} {
+            padding: 80px 0;
+        }
+        @media #{$lg} {
+            padding: 80px 0;
+        }
+        @media #{$md} {
+            padding: 80px 0 100px;
+        }
+        @media #{$xs} {
+            padding: 80px 0 100px;
+        }
+
+        .counter-up {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .single-counter {
+                margin-bottom: 30px;
+
+                h1 {
+                    position: relative;
+                    z-index: 1;
+    
+                    img {
+                        position: absolute;
+                        width: 70px;
+                        height: 43px;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                    }
+                }
+    
+                p {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

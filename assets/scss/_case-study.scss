@@ -1,0 +1,72 @@
+// case-study css
+
+.case-study-section {
+
+  .single-case-study {
+    position: relative;
+    margin-bottom: 30px;
+
+    &:hover {
+      .content {
+        opacity: 1;
+        visibility: visible;
+
+        h4 {
+          a {
+            @include transform(translateX(0));
+          }
+        }
+        p {
+          @include transform(translateX(0));
+        }
+      }
+    }
+
+    .image {
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      position: absolute;
+      background: $white;
+      bottom: 0;
+      left: 0;
+      padding: 30px;
+      max-width: 440px;
+      width: calc(100% - 20px);
+      opacity: 0;
+      visibility: hidden;
+      @include transition(.3s);
+      overflow: hidden;
+
+      &.first-case {
+
+        @media #{$md} {
+          padding: 30px;
+        }
+      }
+
+      @media #{$md} {
+        padding: 20px;
+      }
+
+      h4 {
+
+        a  {
+          margin-bottom: 25px;
+          @include transform(translateX(-50%));
+          @include transition(.3s);
+        }
+      }
+
+      p {
+        @include transform(translateX(-50%));
+        @include transition(.3s);
+      }
+
+    }
+  }
+}

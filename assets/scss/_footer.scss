@@ -1,0 +1,132 @@
+/*===========================
+    13.footer css 
+===========================*/
+
+.footer {
+    
+    .widget-wrapper {
+        position: relative;
+        z-index: 1;
+
+        .footer-widget {
+            margin-bottom: 60px;
+
+            h3 {
+                margin-top: 30px;
+                margin-bottom: 35px;
+            }
+
+            .footer-logo {
+                margin-bottom: 35px;
+            }
+
+            .desc {
+                padding-right: 30px;
+                margin-bottom: 30px;
+            }
+
+            ul.links {
+
+                li {
+
+                    a {
+                        color: $body-color;
+                        margin-bottom: 10px;
+
+
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+
+            .latest-news {
+
+                li {
+                    display: flex;
+
+                    .image {
+                        max-width: 79px;
+                        width: 100%;
+                        margin-right: 20px;
+                        height: 79px;
+
+                        @media #{$lg} {
+                            max-width: 60px;
+                            height: 60px;
+                            margin-right: 12px;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .content {
+                        h5 {
+                            @media #{$lg} {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .map-img {
+        position: absolute;
+        z-index: -1;
+        left: 20px;
+        bottom: 0;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .copyright-wrapper {
+        border-top: 1px solid rgba($body-color, .17);
+        padding: 22px 0;
+
+        p {
+            color: $body-color;
+            text-align: center;
+
+            a {
+                color: $body-color;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        
+    }
+    .socials {
+        display: flex;
+
+        li {
+
+            a {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $heading-color;
+                background: rgba($body-color, .07);
+                margin-right: 15px;
+                font-size: 16px;
+
+                &:hover {
+                    background: $theme-color;
+                    color: $white;
+                }
+
+            }
+        }
+    }
+}

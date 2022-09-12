@@ -1,0 +1,50 @@
+// cta-section css
+
+.cta-section {
+
+    .cta-wrapper {
+        padding: 90px 80px 70px;
+        background: $white;
+        @include box-shadow(0px 0px 77px rgba(178, 183, 190, 0.2));
+
+        @media #{$xs} {
+            padding: 70px 30px;
+        }
+    }
+}
+
+
+
+// contact css
+
+.contact-section {
+    background: #F6F6F6;
+
+    form {
+
+        .single-form {
+            margin-bottom: 20px;
+
+            textarea,
+            input {
+                width: 100%;
+                background: $white;
+                border: 1px solid transparent;
+                border-radius: 30px;
+                padding: 15px 35px;
+                color: $body-color;
+                @include transition(.3s);
+
+                &:focus {
+                    border-color: $heading-color;
+                }
+
+                &::placeholder {
+                    opacity: 1;
+                }
+
+            }
+        }
+    }
+
+}
